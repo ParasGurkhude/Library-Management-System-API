@@ -1,6 +1,7 @@
 const express = require("express")
 const { createAuthor, getAllAuthors, getAuthorById, updateAuthor, deleteAuthor } = require("../controllers/authorController")
 const authorizedRole = require("../middlewares/roleMiddleware")
+const authenticateUser = require("../middlewares/authMiddleware");
 
 const router = express.Router()
 

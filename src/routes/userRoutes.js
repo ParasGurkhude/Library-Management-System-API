@@ -6,7 +6,7 @@ const authorizedRole = require("../middlewares/roleMiddleware");
 
 const router = express.Router()
 
-router.get("/", authenticateUser,authorizedRole("Admin"). getAllUsers)
+router.get("/", authenticateUser,authorizedRole("Admin"), getAllUsers)
 router.get("/:id", authenticateUser, getUsersById)
 router.put("/:id", authenticateUser, updateUser)
 router.delete("/:id", authenticateUser,authorizedRole("Admin"), deleteUser)

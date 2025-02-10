@@ -1,6 +1,7 @@
 const express = require("express")
 const { createBook, getAllBook, getBookById, updateBook, deleteBook } = require("../controllers/bookController")
 const authorizedRole = require("../middlewares/roleMiddleware")
+const authenticateUser = require("../middlewares/authMiddleware");
 
 const router = express.Router()
 

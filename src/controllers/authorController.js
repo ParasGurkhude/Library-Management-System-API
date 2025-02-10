@@ -32,8 +32,8 @@ exports.getAuthorById = async (req, res) =>{
 
 exports.updateAuthor = async (req, res) =>{
     try {
-        const {name, biography, dateOfBirth, nationality} = res.body;
-        const author = await Author.findById(res.params.id);
+        const {name, biography, dateOfBirth, nationality} = req.body;
+        const author = await Author.findById(req.params.id);
         if(!author) return res.status(404).json({message: "Author not found"}); 
 
         if(name) author.name = name;
