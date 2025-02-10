@@ -5,7 +5,7 @@ const userRoutes = require("./src/routes/userRoutes")
 const authorRoutes = require("./src/routes/authorRoutes")
 const bookRoutes = require("./src/routes/bookRoutes")
 
-require("dotenv").config
+require("dotenv").config();
 const app = express()
 
 app.use(express.json())
